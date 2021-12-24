@@ -40,3 +40,41 @@ $(function () { // wait for document ready
 });
 
 
+$('#minus').on('click', function(e) {
+  e.preventDefault();
+  var $this = $(this);
+  var $input = $this.closest('.trash__quantity').find('input');
+  var value = parseInt($input.val());
+
+  if (value > 1) {
+    value = value - 1;
+  } else {
+    value = 1;
+  }
+
+  $input.val(value);
+
+});
+
+$('#plus').on('click', function(e) {
+  e.preventDefault();
+  var $this = $(this);
+  var $input = $this.closest('.trash__quantity').find('input');
+  var value = parseInt($input.val());
+
+  if (value < 9) {
+    value = value + 1;
+  } else {
+    value = 9;
+  }
+
+  $input.val(value);
+});
+
+
+
+
+
+
+
+
