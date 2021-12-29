@@ -71,10 +71,23 @@ $('#plus').on('click', function(e) {
   $input.val(value);
 });
 
+function hover(element) {
+  element.setAttribute('src', 'images/trash_header-bisque.svg');
+}
+
+function unhover(element) {
+  element.setAttribute('src', 'images/trash_header-white.svg');
+}
 
 
+function changeImage(url) {
+  document.getElementById("choiceImage").style.backgroundImage = url;
+}
 
-
-
+document.getElementById("1-st").onclick = function() { changeImage('url("images/_DSC0650.jpg")'); }
+document.getElementById("2-nd").onclick = function() { changeImage('url("images/_DSC0624.jpg")'); }
+document.getElementById("3-rd").onclick = function() { changeImage('url("images/_DSC0776.jpg")'); }
+document.getElementById("4-th").onclick = function() { changeImage('url("images/_DSC0790.jpg")'); }
+document.getElementById("5-th").onclick = function() { changeImage('url("images/_DSC0791.jpg")'); }
 
 

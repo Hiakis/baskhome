@@ -12,6 +12,7 @@
 @import url(../blocks/menu/__content-shop/menu__content-shop.css);
 @import url(../blocks/menu/__trash/menu__trash.css);
 @import url(../blocks/menu/__trash-number/menu__trash-number.css);
+@import url(../blocks/menu/__trash-image/menu__trash-image.css);
 @import url(../blocks/dream/__title/dream__title.css);
 @import url(../blocks/bed/bed.css);
 @import url(../blocks/bed/__container-text/bed__container-text.css);
@@ -41,6 +42,18 @@
 @import url(../blocks/trash/__button-formalization/trash__button-formalization.css);
 @import url(../blocks/trash/__total/trash__total.css);
 @import url(../blocks/trash/__total-price/trash__total-price.css);
+@import url(../blocks/constructor/constructor.css);
+@import url(../blocks/constructor/__container/constructor__container.css);
+@import url(../blocks/constructor/__container-choice/conctructor__container-choice.css);
+@import url(../blocks/constructor/__container-choice/_title/constructor__container-choice_title.css);
+@import url(../blocks/constructor/__container-choice/_image/constructor__container-choice_image.css);
+@import url(../blocks/constructor/__container-choice/_button/constructor__container-choice_button.css);
+@import url(../blocks/constructor/__container-buttons/constructor__container-buttons.css);
+@import url(../blocks/constructor/__container-contect/constructor__container-content.css);
+@import url(../blocks/constructor/__product/constructor__product.css);
+@import url(../blocks/constructor/__product/_title/constructor__product_title.css);
+@import url(../blocks/constructor/__product/_subtitle/constructor__product_subtitle.css);
+@import url(../blocks/constructor/__product/_container/constructor__product_container.css);
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/footer/__columns/footer__columns.css);
 @import url(../blocks/footer/__column/_content/footer__column_content_copyright.css);
@@ -51,3 +64,4 @@
 @import url(../blocks/footer/__social/footer__social-icon.css);
 @import url(../blocks/footer/__column-social/footer__column-social.css);
 @import url(../blocks/footer/__column/_content/footer__column_content_social.css);
+@import url(../blocks/footer/__column/_content/footer__column_content_info.css);
