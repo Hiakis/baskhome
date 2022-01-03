@@ -40,7 +40,7 @@ $(function () { // wait for document ready
 });
 
 
-$('#minus').on('click', function(e) {
+$('.trash__button-minus').on('click', function(e) {
   e.preventDefault();
   var $this = $(this);
   var $input = $this.closest('.trash__quantity').find('input');
@@ -56,7 +56,7 @@ $('#minus').on('click', function(e) {
 
 });
 
-$('#plus').on('click', function(e) {
+$('.trash__button-plus').on('click', function(e) {
   e.preventDefault();
   var $this = $(this);
   var $input = $this.closest('.trash__quantity').find('input');
@@ -84,10 +84,10 @@ function changeImage(url) {
   document.getElementById("choiceImage").style.backgroundImage = url;
 }
 
-document.getElementById("1-st").onclick = function() { changeImage('url("images/_DSC0650.jpg")'); }
-document.getElementById("2-nd").onclick = function() { changeImage('url("images/_DSC0624.jpg")'); }
-document.getElementById("3-rd").onclick = function() { changeImage('url("images/_DSC0776.jpg")'); }
-document.getElementById("4-th").onclick = function() { changeImage('url("images/_DSC0790.jpg")'); }
-document.getElementById("5-th").onclick = function() { changeImage('url("images/_DSC0791.jpg")'); }
+document.getElementById("1-st").onclick = function() { changeImage('url("images/catalog/Coffee.jpg")'); }
+document.getElementById("2-nd").onclick = function() { changeImage('url("images/catalog/ColdGrey.jpg")'); }
+document.getElementById("3-rd").onclick = function() { changeImage('url("images/catalog/Coral.jpg")'); }
+document.getElementById("4-th").onclick = function() { changeImage('url("images/catalog/Graphite.jpg")'); }
+document.getElementById("5-th").onclick = function() { changeImage('url("images/catalog/OLIVE.jpg")'); }
 
 
