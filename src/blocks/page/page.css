@@ -4,8 +4,10 @@
   -moz-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: 'Inter', 'Arial', sans-serif;
+  font-family: 'Montserrat', 'Inter', 'Arial', sans-serif;
   max-width: 1920px;
+  height: 100vh;
+  color: black;
   background-color: #fff;
   margin: 0 auto;
 }

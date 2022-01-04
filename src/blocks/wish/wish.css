@@ -1,0 +1,8 @@
+.wish {
+  background-color: #1f1f1f;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
