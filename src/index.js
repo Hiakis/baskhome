@@ -10,37 +10,6 @@ window.onscroll = function() {
 }
 
 
-$(function () { // wait for document ready
-  // init
-  var controller = new ScrollMagic.Controller();
-
-  // define movement of panels
-  var wipeAnimation = new TimelineMax()
-    // animate to second panel
-    .to("#slideContainer", 0.5, {z: -150})		// move back in 3D space
-    .to("#slideContainer", 1,   {x: "-25%"})	// move in to first panel
-    .to("#slideContainer", 0.5, {z: 0})				// move back to origin in 3D space
-    // animate to third panel
-    .to("#slideContainer", 0.5, {z: -150, delay: 1})
-    .to("#slideContainer", 1,   {x: "-50%"})
-    .to("#slideContainer", 0.5, {z: 0})
-    // animate to forth panel
-    .to("#slideContainer", 0.5, {z: -150, delay: 1})
-    .to("#slideContainer", 1,   {x: "-75%"})
-    .to("#slideContainer", 0.5, {z: 0});
-
-  // create scene to pin and link animation
-  new ScrollMagic.Scene({
-    triggerElement: "#pinContainer",
-    triggerHook: "onLeave",
-    duration: "500%"
-  })
-    .setPin("#pinContainer")
-    .setTween(wipeAnimation)
-    .addTo(controller);
-});
-
-
 function onEntry(entry) {
   entry.forEach(change => {
     if (change.isIntersecting) {
@@ -57,6 +26,39 @@ let elements = document.querySelectorAll('.wish__animation');
 for (let elm of elements) {
   observer.observe(elm);
 }
+
+// Init ScrollMagic
+var ctrl = new ScrollMagic.Controller({
+  globalSceneOptions: {
+    triggerHook: 'onLeave'
+  }
+});
+
+// Create scene
+$(".scene").each(function() {
+
+  var name = $(this).attr('id');
+
+  new ScrollMagic.Scene({
+    triggerElement: this
+  })
+    .setPin(this)
+    .addIndicators()
+    .loglevel(3)
+    .addTo(ctrl);
+
+});
+
+// Get window height
+var wh = window.innerHeight;
+
+new ScrollMagic.Scene({
+  offset: wh*3
+})
+  .setClassToggle("section#four", "is-active")
+  .addTo(ctrl);
+
+
 
 
 $('.trash__button-minus').on('click', function(e) {

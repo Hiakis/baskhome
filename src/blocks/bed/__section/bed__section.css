@@ -1,23 +1,17 @@
 .bed__section {
   height: 100%;
-  width: 25%;
   float: left;
   display: flex;
   background-color: #1f1f1f;
   color: white;
   position: relative;
+  border-top: 1px solid #E1E8EE;
+  overflow: hidden;
 }
 
 
 .color {
-  color: white;
-}
-
-.color:nth-child(2) {
-  color: white;
-}
-
-.color:nth-child(4) {
-  background-color: white;
   color: black;
+  background-color: white;
 }
+
