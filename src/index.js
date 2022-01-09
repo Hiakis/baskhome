@@ -8,6 +8,19 @@ window.onscroll = function() {
   }
   prevScrollpos = currentScrollPos;
 }
+///Выпадающее навигационное меню////
+
+function hover(element) {
+  element.setAttribute('src', 'images/trash_header-bisque.svg');
+}
+
+function unhover(element) {
+  element.setAttribute('src', 'images/trash_header-white.svg');
+}
+///Изменение фона корзины при наведение////
+
+
+
 
 window.onscroll = function()
 {
@@ -20,10 +33,15 @@ window.onscroll = function()
     wishAnimation.classList.add('wish__animation_show')
   }
 }
+///Анимация если пользователь долистал до конца///
+
+
 
 $(function(){
   $("#phone").mask("+7(999)999-99-99");
 });
+///Маска номера телефона///
+
 
 
 // Init ScrollMagic
@@ -36,14 +54,10 @@ var ctrl = new ScrollMagic.Controller({
 // Create scene
 $(".scene").each(function() {
 
-  var name = $(this).attr('id');
-
   new ScrollMagic.Scene({
     triggerElement: this
   })
     .setPin(this)
-    .addIndicators()
-    .loglevel(3)
     .addTo(ctrl);
 
 });
@@ -54,8 +68,7 @@ var wh = window.innerHeight;
 new ScrollMagic.Scene({
   offset: wh*3
 })
-  .setClassToggle("section#four", "is-active")
-  .addTo(ctrl);
+
 
 
 
@@ -91,24 +104,7 @@ $('.trash__button-plus').on('click', function(e) {
   $input.val(value);
 });
 
-function hover(element) {
-  element.setAttribute('src', 'images/trash_header-bisque.svg');
-}
 
-function unhover(element) {
-  element.setAttribute('src', 'images/trash_header-white.svg');
-}
-
-
-function changeImage(url) {
-  document.getElementById("choiceImage").style.backgroundImage = url;
-}
-
-document.getElementById("1-st").onclick = function() { changeImage('url("images/catalog/Coffee.jpg")'); }
-document.getElementById("2-nd").onclick = function() { changeImage('url("images/catalog/ColdGrey.jpg")'); }
-document.getElementById("3-rd").onclick = function() { changeImage('url("images/catalog/Coral.jpg")'); }
-document.getElementById("4-th").onclick = function() { changeImage('url("images/catalog/Graphite.jpg")'); }
-document.getElementById("5-th").onclick = function() { changeImage('url("images/catalog/OLIVE.jpg")'); }
 
 
 
