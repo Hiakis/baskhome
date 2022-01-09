@@ -9,23 +9,22 @@ window.onscroll = function() {
   prevScrollpos = currentScrollPos;
 }
 
-
-function onEntry(entry) {
-  entry.forEach(change => {
-    if (change.isIntersecting) {
-      change.target.classList.add('wish__animation_show');
-    }
-  });
+window.onscroll = function()
+{
+  let scrollHeight, totalHeight;
+  scrollHeight = document.body.scrollHeight;
+  totalHeight = window.scrollY + window.innerHeight;
+  const wishAnimation = document.querySelector('.wish__animation')
+  if(totalHeight >= scrollHeight)
+  {
+    wishAnimation.classList.add('wish__animation_show')
+  }
 }
 
-let options = {
-  threshold: [0.5] };
-let observer = new IntersectionObserver(onEntry, options);
-let elements = document.querySelectorAll('.wish__animation');
+$(function(){
+  $("#phone").mask("+7(999)999-99-99");
+});
 
-for (let elm of elements) {
-  observer.observe(elm);
-}
 
 // Init ScrollMagic
 var ctrl = new ScrollMagic.Controller({
