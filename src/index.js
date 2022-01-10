@@ -59,7 +59,6 @@ $(".scene").each(function() {
   })
     .setPin(this)
     .addTo(ctrl);
-
 });
 
 // Get window height
@@ -68,7 +67,7 @@ var wh = window.innerHeight;
 new ScrollMagic.Scene({
   offset: wh*3
 })
-
+///Scroll Magic Анимация
 
 
 
@@ -86,7 +85,6 @@ $('.trash__button-minus').on('click', function(e) {
   }
 
   $input.val(value);
-
 });
 
 $('.trash__button-plus').on('click', function(e) {
